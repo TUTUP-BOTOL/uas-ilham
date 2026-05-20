@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @font-face {
+            font-family: 'coolvetica';
+            src: url('../font/NaughtyMonster.ttf') format('truetype');
+        }
+
+        .font1 {
+            font-family: 'coolvetica', sans-serif;
+        }
+
+        @font-face {
+            font-family: 'daily';
+            src: url('../font/DailyFlashback-Regular Demo.ttf') format('truetype');
+        }
+
+        .font2 {
+            font-family: 'daily', sans-serif;
+        }
+
+        @font-face {
+            font-family: 'urban';
+            src: url('../font/Urban Blocker PersonalUseOnly.ttf') format('truetype');
+        }
+
+        .font3 {
+            font-family: 'urban', sans-serif;
+        }
+    </style>
+
+    <title>beranda</title>
+</head>
+
+<body class="bg-[#EAEAEA] flex h-screen ">
+
+    <div class="w-full h-[65vh] bg-[#293241] shadow-xl p-8 overflow-hidden">
+        <!-- Tempat Header -->
+        <div id="header"></div>
+
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+        </script>
+
+        <div class="flex w-full h-full gap-5">
+
+            <!-- Kiri 60% -->
+            <div class="w-[60%] p-5 flex flex-col justify-center h-full">
+                <p class="text-[#DFFBFC] text-[22px] font-medium font2">
+                    Project Ujian Akhir Semester
+                </p>
+                <p class="text-[#DFFBFC] text-[78px] font-medium leading-[65px] font3">
+                    Algoritma & <br>
+                    Pemograman
+                </p>
+            </div>
+
+            <!-- Kanan 40% -->
+            <div class="w-[40%] p-5">
+                <img src="../gambar/gambar.png" alt="Foto" class="w-[372px] h-[350px] object-cover rounded-2xl" />
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
